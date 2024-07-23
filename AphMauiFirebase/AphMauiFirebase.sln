@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "AphMauiFirebase\Core.csproj", "{C4E7B11E-5D90-4182-B4B4-DA2133AE028D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Features", "Features", "{B2792953-1ACF-4FE5-A080-8A985A63574C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth", "Features\Auth\Auth.csproj", "{DA58D0FF-AA90-49E4-9B5C-2727D5335832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudMessaging", "Features\CloudMessaging\CloudMessaging.csproj", "{A8BF0A77-3335-4E03-8732-39B7E04675C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4E7B11E-5D90-4182-B4B4-DA2133AE028D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E7B11E-5D90-4182-B4B4-DA2133AE028D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E7B11E-5D90-4182-B4B4-DA2133AE028D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E7B11E-5D90-4182-B4B4-DA2133AE028D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA58D0FF-AA90-49E4-9B5C-2727D5335832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA58D0FF-AA90-49E4-9B5C-2727D5335832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA58D0FF-AA90-49E4-9B5C-2727D5335832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA58D0FF-AA90-49E4-9B5C-2727D5335832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8BF0A77-3335-4E03-8732-39B7E04675C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8BF0A77-3335-4E03-8732-39B7E04675C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8BF0A77-3335-4E03-8732-39B7E04675C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8BF0A77-3335-4E03-8732-39B7E04675C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DA58D0FF-AA90-49E4-9B5C-2727D5335832} = {B2792953-1ACF-4FE5-A080-8A985A63574C}
+		{A8BF0A77-3335-4E03-8732-39B7E04675C8} = {B2792953-1ACF-4FE5-A080-8A985A63574C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {57887B04-4D7E-4219-BF1B-71094C3EE64A}
+	EndGlobalSection
+EndGlobal
