@@ -1,13 +1,14 @@
-namespace APH.Maui.Firebase.Auth;
+﻿namespace APH.Maui.Firebase.Analytics;
 
-public sealed class CrossFirebaseAuth
+
+public sealed class CrossFirebaseAnalytics
 {
-    private static Lazy<IFirebaseAuth> _implementation = new Lazy<IFirebaseAuth>(CreateInstance, LazyThreadSafetyMode.PublicationOnly);
+    private static Lazy<IFirebaseAnalytics> _implementation = new Lazy<IFirebaseAnalytics>(CreateInstance, System.Threading.LazyThreadSafetyMode.PublicationOnly);
 
-    private static IFirebaseAuth CreateInstance()
+    private static IFirebaseAnalytics CreateInstance()
     {
-#if ANDROID || IOS
-        return new FirebaseAuthImplementation();
+#if IOS || ANDROID
+        return new FirebaseAnalyticsImplementation();
 #else
 #pragma warning disable IDE0022 // Use expression body for methods
         return null;
@@ -23,7 +24,7 @@ public sealed class CrossFirebaseAuth
     /// <summary>
     /// Current plugin implementation to use
     /// </summary>
-    public static IFirebaseAuth Current
+    public static IFirebaseAnalytics Current
     {
         get
         {
@@ -47,7 +48,7 @@ public sealed class CrossFirebaseAuth
         if (_implementation != null && _implementation.IsValueCreated)
         {
             _implementation.Value.Dispose();
-            _implementation = new Lazy<IFirebaseAuth>(CreateInstance, LazyThreadSafetyMode.PublicationOnly);
+            _implementation = new Lazy<IFirebaseAnalytics>(CreateInstance, System.Threading.LazyThreadSafetyMode.PublicationOnly);
         }
     }
 }
