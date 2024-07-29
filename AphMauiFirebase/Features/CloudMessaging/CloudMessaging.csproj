@@ -27,7 +27,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\AphMauiFirebase\Core.csproj" />
+	  <ProjectReference Include="..\..\Core\Core.csproj" />
 	</ItemGroup>
 
 </Project>
