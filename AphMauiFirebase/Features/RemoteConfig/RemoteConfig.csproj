@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net8.0-android;net8.0-ios;</TargetFrameworks>
@@ -8,26 +8,26 @@
 		<Nullable>enable</Nullable>
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">24.0</SupportedOSPlatformVersion>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<RootNamespace>APH.Maui.Firebase.Functions</RootNamespace>
-		<PackageId>APH.Maui.Firebase.Functions</PackageId>
+		<RootNamespace>APH.Maui.Firebase.RemoteConfig</RootNamespace>
+		<PackageId>APH.Maui.Firebase.RemoteConfig</PackageId>
 		<Authors>agarza</Authors>
 		<Company>APH</Company>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.70" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.70" /> 
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.70" />
 	</ItemGroup>
 
 	<!-- nuget packages -->
 	<ItemGroup Condition="$(TargetFramework.Contains('-android'))">
-		<PackageReference Include="Xamarin.Firebase.Functions" Version="121.0.0.1" />
+		<PackageReference Include="Xamarin.Firebase.Config" Version="121.1.2" />
 	</ItemGroup>
 
 	<ItemGroup Condition="$(TargetFramework.Contains('-ios'))">
-		<PackageReference Include="Xamarin.Firebase.iOS.CloudFunctions" Version="8.10.0.3" />
+		<PackageReference Include="Xamarin.Firebase.iOS.RemoteConfig" Version="8.10.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>

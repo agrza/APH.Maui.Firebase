@@ -36,6 +36,21 @@ rmdir Features\CloudMessaging\obj /s /q
 rmdir Features\Crashlytics\bin /s /q
 rmdir Features\Crashlytics\obj /s /q
 
+rmdir Features\DynamicLinks\bin /s /q
+rmdir Features\DynamicLinks\obj /s /q
+
+rmdir Features\Firestore\bin /s /q
+rmdir Features\Firestore\obj /s /q
+
+rmdir Features\Functions\bin /s /q
+rmdir Features\Functions\obj /s /q
+
+rmdir Features\RemoteConfig\bin /s /q
+rmdir Features\RemoteConfig\obj /s /q
+
+rmdir Features\Storage\bin /s /q
+rmdir Features\Storage\obj /s /q
+
 echo ======================================================================
 echo  Folders Deleted
 echo ======================================================================
@@ -60,12 +75,19 @@ echo  Show compilation results and return release build errorlevel
 echo ======================================================================
 @REM Create folder to put packages inside
 mkdir Packages
+
 @REM copy all packages in folder
 copy Core\bin\Release\*.nupkg Packages /y
 copy Features\Analytics\bin\Release\*.nupkg Packages /y
 copy Features\Auth\bin\Release\*.nupkg Packages /y
 copy Features\CloudMessaging\bin\Release\*.nupkg Packages /y
 copy Features\Crashlytics\bin\Release\*.nupkg Packages /y
+copy Features\DynamicLinks\bin\Release\*.nupkg Packages /y
+copy Features\Firestore\bin\Release\*.nupkg Packages /y
+copy Features\Functions\bin\Release\*.nupkg Packages /y
+copy Features\RemoteConfig\bin\Release\*.nupkg Packages /y
+copy Features\Storage\bin\Release\*.nupkg Packages /y
+
 @REM Open packages folder
 cd Packages
 start.
